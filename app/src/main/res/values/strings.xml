@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">WFI2017</string>
+    <string name="start_desc">Lets me ask you few questions, before you get started. </string>
+
+    <string name="q1">1. What is your name ? </string>
+
+    <string name="q2">2. Your Gender ? </string>
+
+    <string name="q3">3. Input your weight (In Kg.)</string>
+
+    <string name="q4">4. Enter Your Height </string>
+
+</resources>
