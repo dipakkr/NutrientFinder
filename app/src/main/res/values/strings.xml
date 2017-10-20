@@ -10,4 +10,7 @@
 
     <string name="q4">4. Enter Your Height </string>
 
+    //Profile_Menu
+    <string name="edit">Edit</string>
+
 </resources>

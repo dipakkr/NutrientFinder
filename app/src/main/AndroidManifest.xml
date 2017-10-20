@@ -20,6 +20,15 @@
 
         <activity android:name=".activity.DashBoardActivity"
             android:theme="@style/AppTheme2"/>
+        <activity android:name=".activity.ProfileActivity"
+            android:theme="@style/AppTheme2"/>
+
+        <activity android:name=".activity.FoodNutrientActivity"/>
+
+        <activity android:name=".activity.FoodDieseaseActivity"/>
+
+        <activity android:name=".activity.HealthTrackerActivity"/>
+
     </application>
 
 </manifest>

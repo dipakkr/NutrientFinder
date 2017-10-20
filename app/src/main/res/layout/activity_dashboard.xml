@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -14,17 +15,90 @@
             android:background="@color/colorToolbar"
             android:layout_height="70dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Nutrients Finder"
-                android:textSize="20sp"
-                android:gravity=""
-                android:textColor="@color/colorAccent2"
-                android:textStyle="bold"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nutrients Finder"
+                    android:textSize="20sp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:textColor="@color/colorAccent2"
+                    android:textStyle="bold"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/menu_profile"
+                    android:layout_margin="10sp"
+                    android:clickable="true"
+                    android:background="?attr/selectableItemBackground"
+                    android:src="@drawable/ic_account_circle_black_24dp" />
+
+            </LinearLayout>
 
         </android.support.v7.widget.Toolbar>
 
     </android.support.design.widget.AppBarLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:background="?attr/selectableItemBackground"
+        android:src="@drawable/ic_photo_camera_black_24dp"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="25dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:background="#a0e1e1e1"
+            android:layout_height="230dp">
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Nutrients in Food"
+            android:textSize="20sp"
+            android:padding="15dp"
+            android:clickable="true"
+            android:textColor="#000"
+            android:background="?attr/selectableItemBackground"
+            android:id="@+id/food_nutrient"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Disease Wise Food "
+            android:textSize="20sp"
+            android:padding="15dp"
+            android:textColor="#000"
+            android:clickable="true"
+            android:background="?attr/selectableItemBackground"
+            android:id="@+id/food_disease"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:textSize="20sp"
+            android:padding="15dp"
+            android:textColor="#000"
+            android:background="?attr/selectableItemBackground"
+            android:text="Track your Health"
+            android:id="@+id/health_track"/>
+
+    </LinearLayout>
 
 </android.support.design.widget.CoordinatorLayout>
