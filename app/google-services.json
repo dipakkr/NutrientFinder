@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "531936741923",
+    "firebase_url": "https://m-nutrino.firebaseio.com",
+    "project_id": "m-nutrino",
+    "storage_bucket": "m-nutrino.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:531936741923:android:f0cbfc0a00fd3c05",
+        "android_client_info": {
+          "package_name": "com.parivartan.github.wfi2017"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "531936741923-p6jja2f0k8o33tj7ibufoq4dakgchgjc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.parivartan.github.wfi2017",
+            "certificate_hash": "ea330d9318aba61e1a499cb54c1a030b2b965c7b"
+          }
+        },
+        {
+          "client_id": "531936741923-s489f5875bf5us8beeri68sqbh1rumfr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDXthvXpLFkOkTTomC7ELiJqWhwBCIFk8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "531936741923-s489f5875bf5us8beeri68sqbh1rumfr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

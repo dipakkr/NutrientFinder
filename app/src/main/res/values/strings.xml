@@ -6,11 +6,23 @@
 
     <string name="q2">2. Your Gender ? </string>
 
-    <string name="q3">3. Input your weight (In Kg.)</string>
+    <string name="q3">3. How old are you?</string>
 
-    <string name="q4">4. Enter Your Height </string>
+    <string name="q4">4. Input your weight (In Kg.)</string>
 
+    <string name="q5">5. Enter Your Height </string>
+
+    <string name="q6">6. Choose you activity :</string>
+
+    <string name="q6_1">Little or no exercise</string>
+
+    <string name="q6_2">Little exercise/sports 1&#8211;3 days/week </string>
+    
+    <string name="q6_3">Moderate exercise/sports 3&#8211;5 days/week</string>
+
+    <string name="q6_4">Hard exercise/sports 6&#8211;7 days/week</string>
     //Profile_Menu
     <string name="edit">Edit</string>
+
 
 </resources>

@@ -21,7 +21,32 @@
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_margin="10dp"
-        android:layout_height="wrap_content"
+        android:layout_height="70dp">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:padding="10dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:inputType="textEmailAddress"
+                android:layout_height="wrap_content"
+                android:id="@+id/et_email"
+                android:hint="Enter Email"
+                android:padding="10dp"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:layout_height="400dp"
         xmlns:android="http://schemas.android.com/apk/res/android">
 
         <ScrollView
@@ -43,6 +68,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:textSize="17sp"
+                        android:textColor="#212121"
                         android:layout_height="wrap_content"
                         android:text="@string/q1"/>
 
@@ -58,7 +84,8 @@
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="0.5dp"
-                    android:layout_margin="5dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
                     android:background="#e1e1e1"/>
 
                 <LinearLayout
@@ -70,6 +97,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:textSize="17sp"
+                        android:textColor="#212121"
                         android:layout_height="wrap_content"
                         android:text="@string/q2"/>
 
@@ -78,6 +106,7 @@
                         android:orientation="horizontal"
                         android:layout_marginTop="15dp"
                         android:layout_weight="1"
+                        android:id="@+id/rg_sex"
                         android:layout_height="wrap_content">
 
                         <RadioButton
@@ -97,11 +126,36 @@
                         <RadioButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:id="@+id/sex_none"
+                            android:id="@+id/sex_others"
                             android:layout_weight="1"
-                            android:text="None"/>
+                            android:text="Others"/>
 
                     </RadioGroup>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:padding="15dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textSize="17sp"
+                        android:textColor="#212121"
+                        android:layout_height="wrap_content"
+                        android:text="@string/q3"/>
+
+                    <EditText
+                        android:layout_width="100dp"
+                        android:layout_marginTop="10dp"
+                        android:inputType="number"
+                        android:id="@+id/et_age"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10sp"
+                        android:hint="Years"/>
+
                 </LinearLayout>
 
                 <View
@@ -120,7 +174,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="17sp"
-                        android:text="@string/q3"/>
+                        android:textColor="#212121"
+                        android:text="@string/q4"/>
 
                     <EditText
                         android:layout_width="100dp"
@@ -148,7 +203,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="17sp"
-                        android:text="@string/q4"/>
+                        android:textColor="#212121"
+                        android:text="@string/q5"/>
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -160,7 +216,7 @@
                             android:layout_marginTop="10dp"
                             android:layout_marginStart="10dp"
                             android:id="@+id/height_ft"
-                            android:inputType="textCapCharacters"
+                            android:inputType="number"
                             android:layout_height="wrap_content" />
 
                         <TextView
@@ -173,7 +229,7 @@
                             android:layout_marginTop="10dp"
                             android:layout_marginStart="10dp"
                             android:id="@+id/height_in"
-                            android:inputType="textCapCharacters"
+                            android:inputType="number"
                             android:layout_height="wrap_content" />
 
                         <TextView
@@ -185,7 +241,55 @@
 
                 </LinearLayout>
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:padding="15dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="17sp"
+                        android:textColor="#212121"
+                        android:text="@string/q6"/>
+
+                    <RadioGroup
+                        android:layout_width="wrap_content"
+                        android:id="@+id/rg_activity"
+                        android:layout_height="wrap_content">
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/q6_a"
+                            android:text="@string/q6_1"/>
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:id="@+id/q6_b"
+                            android:layout_height="wrap_content"
+                            android:text="@string/q6_2"/>
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/q6_c"
+                            android:text="@string/q6_3"/>
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/q6_d"
+                            android:text="@string/q6_4"/>
+
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
             </LinearLayout>
+
         </ScrollView>
 
     </android.support.v7.widget.CardView>
