@@ -1,6 +1,8 @@
 package com.parivartan.github.wfi2017;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -34,8 +36,8 @@ public class MainActivity extends AppCompatActivity {
     DatabaseReference mRef;
     String name, weight,age, txt_ft, txt_inch;
 
-    String username = "raj.deeepak";
-    String txt_email = "deepak.kumar@gmail.com";
+    String username = "rajdeeepak";
+    String txt_email = "deepakkumar@gmail.com";
 
     int sex_num = 0;
     int actvity_num = 1;
@@ -50,6 +52,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        final SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
 
         database = FirebaseDatabase.getInstance();
         mRef = database.getReference("users");
@@ -77,15 +81,14 @@ public class MainActivity extends AppCompatActivity {
                 age = et_age.getText().toString();
                 txt_ft = height_ft.getText().toString();
                 txt_inch = height_inch.getText().toString();
+                txt_email = et_email.getText().toString();
 
                 int ft = Integer.valueOf(txt_ft);
                 int inch = Integer.valueOf(txt_inch);
-
                 user_height = ft*30.48 + inch*2.54 ;
 
                 selectedsex = rg_sex.getCheckedRadioButtonId();
                 selectedActivity  = rg_activity.getCheckedRadioButtonId();
-
                 sex = (RadioButton)findViewById(selectedsex);
                 activity = (RadioButton)findViewById(selectedActivity);
 
@@ -95,7 +98,6 @@ public class MainActivity extends AppCompatActivity {
                 username = txt_email.substring(0,index);
 
                 //Selecting sex
-
                 if(selectedsex == R.id.sex_male){
                     sex_num = 0;
                 }else if(selectedsex == R.id.sex_female){
@@ -105,7 +107,6 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 //Selecting Activity
-
                 if(selectedActivity == R.id.q6_a){
                     actvity_num = 1;
                 }else if(selectedActivity == R.id.q6_b){
@@ -116,13 +117,15 @@ public class MainActivity extends AppCompatActivity {
                     actvity_num = 4;
                 }
 
+                SharedPreferences.Editor editor = pref.edit();
+                editor.putString("user_name",username);
+                editor.apply();
 
-                //Upload data to firebase
                 User user = new User(name, username, age, sex_num, weight, user_height, actvity_num);
-                mRef.push().setValue(user);
+                mRef.child(username).setValue(user);
+
                 startActivity(new Intent(MainActivity.this, DashBoardActivity.class));
             }
         });
-
     }
 }

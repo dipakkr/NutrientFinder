@@ -99,6 +99,18 @@
             android:text="Track your Health"
             android:id="@+id/health_track"/>
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:textSize="20sp"
+            android:padding="10dp"
+            android:textColor="#000"
+            android:layout_marginStart="5dp"
+            android:background="?attr/selectableItemBackground"
+            android:text="Food for current location"
+            android:id="@+id/suggestion_current_location"/>
+
     </LinearLayout>
 
 </android.support.design.widget.CoordinatorLayout>

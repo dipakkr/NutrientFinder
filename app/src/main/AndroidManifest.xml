@@ -31,6 +31,8 @@
 
         <activity android:name=".activity.HealthTrackerActivity"/>
 
+        <activity android:name=".activity.CurrentFoodSuggestion"/>
+
     </application>
 
 </manifest>

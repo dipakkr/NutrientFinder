@@ -5,13 +5,17 @@ package com.parivartan.github.wfi2017.model;
  */
 
 public class User {
-    private String name;
-    private String username;
-    private String age;
-    private int gender;
-    private String weight;
-    private double height;
-    private int activity;
+    public String name;
+    public String username;
+    public String age;
+    public int gender;
+    public String weight;
+    public double height;
+    public int activity;
+
+    public User(){
+
+    }
 
     public User(String name, String username,String age, int gender, String weight, double height, int activity) {
         this.name = name;
