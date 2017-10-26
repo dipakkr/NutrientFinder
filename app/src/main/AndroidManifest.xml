@@ -32,20 +32,27 @@
         <activity android:name=".activity.ProfileActivity"
             android:theme="@style/AppTheme2"/>
 
-        <activity android:name=".activity.FoodNutrientActivity"/>
+        <activity android:name=".activity.FoodNutrientActivity"
+            android:parentActivityName=".activity.DashBoardActivity"/>
 
-        <activity android:name=".activity.FoodDieseaseActivity"/>
+        <activity android:name=".activity.FoodDieseaseActivity"
+            android:parentActivityName=".activity.DashBoardActivity"/>
 
-        <activity android:name=".activity.HealthTrackerActivity"/>
+        <activity android:name=".activity.HealthTrackerActivity"
+            android:parentActivityName=".activity.DashBoardActivity"/>
 
-        <activity android:name=".activity.CurrentFoodSuggestion"/>
+        <activity android:name=".activity.CurrentFoodSuggestion"
+            android:parentActivityName=".activity.DashBoardActivity"/>
 
-        <activity android:name=".activity.CatFoodListActivity"/>
+        <activity android:name=".activity.CatFoodListActivity"
+            android:parentActivityName=".activity.FoodNutrientActivity"/>
 
-        <activity android:name=".activity.FoodDetailActivity"/>
+        <activity android:name=".activity.FoodDetailActivity"
+            android:parentActivityName=".activity.CatFoodListActivity"/>
 
         <activity android:name=".activity.AddFoodActivity"
-            android:theme="@style/AppTheme1"/>
+            android:theme="@style/AppTheme1"
+            android:parentActivityName=".activity.DashBoardActivity"/>
 
         <activity android:name=".activity.VisionActivity"
             android:theme="@style/AppTheme.NoActionBar">

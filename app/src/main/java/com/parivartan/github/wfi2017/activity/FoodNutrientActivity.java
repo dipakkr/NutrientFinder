@@ -51,7 +51,6 @@ public class FoodNutrientActivity extends AppCompatActivity {
         pref = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
         final SharedPreferences.Editor editor = pref.edit();
 
-
         mRef = FirebaseDatabase.getInstance().getReference("food_items");
 
         final ListView listview = (ListView) findViewById(R.id.listview);
@@ -65,18 +64,15 @@ public class FoodNutrientActivity extends AppCompatActivity {
         final ArrayAdapter<String> adapter = new ArrayAdapter(this,
                 android.R.layout.select_dialog_item, list);
         listview.setAdapter(adapter);
-
         listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
                 Bundle bundle = new Bundle();
                 bundle.putInt("position",position);
-
                 Intent intent = new Intent(FoodNutrientActivity.this,CatFoodListActivity.class);
                 intent.putExtras(bundle);
                 startActivity(intent);
-
                 Toast.makeText(getApplicationContext(),position + "clicked",Toast.LENGTH_SHORT).show();
             }
         });

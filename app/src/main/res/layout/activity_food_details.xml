@@ -1,9 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
+    android:background="#33f8fbff"
     android:layout_height="match_parent">
 
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:background="#e1e1e1"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:id="@+id/toolbar"
+            android:layout_height="?attr/actionBarSize">
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_height="wrap_content">
 
 
-</LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_calorie"
+        android:text="Calories"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="#ab0126"
+        android:padding="10dp"
+        android:gravity="center_horizontal"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:background="#bfdfdfdf"
+        android:padding="20dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:text="Fat"
+            android:gravity="center_horizontal"
+            android:layout_weight="1"
+            android:textStyle="italic"
+            android:layout_height="wrap_content"
+            android:id="@+id/content_fat"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:text="Carbs"
+            android:textStyle="italic"
+            android:gravity="center_horizontal"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:id="@+id/content_carbs"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:text="Protein"
+            android:textStyle="italic"
+            android:gravity="center_horizontal"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:id="@+id/content_protein"/>
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:background="#bfdfdfdf"
+            android:padding="20dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:text="State"
+                android:gravity="center_horizontal"
+                android:layout_weight="1"
+                android:textStyle="italic"
+                android:id="@+id/content_state_id"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:text="Veg/Non-Veg"
+                android:textStyle="italic"
+                android:gravity="center_horizontal"
+                android:layout_weight="1"
+                android:id="@+id/content_type"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:text="Food Type"
+                android:textStyle="italic"
+                android:gravity="center_horizontal"
+                android:layout_weight="1"
+                android:id="@+id/content_type2"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Serving"
+            android:padding="10dp"
+            android:id="@+id/content_serving"
+            android:gravity="center_horizontal"/>
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

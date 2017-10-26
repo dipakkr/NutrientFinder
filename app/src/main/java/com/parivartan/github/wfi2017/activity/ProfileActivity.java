@@ -93,12 +93,10 @@ public class ProfileActivity extends AppCompatActivity{
                 activity_id = user.getActivity();
 
                 UpdateUI(name,age,sex,weight,height,activity_id);
-
             }
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
-
             }
         };
 
@@ -107,7 +105,6 @@ public class ProfileActivity extends AppCompatActivity{
 
         mRef.addValueEventListener(valueEventListener);
         mValueEventListener = valueEventListener;
-
     }
 
     public void UpdateUI(String name,String age,int sex,String weight,double height, int activity_id){
@@ -161,7 +158,6 @@ public class ProfileActivity extends AppCompatActivity{
 
         int cal_x = (int)calorie;
         String txt_cal = String.valueOf(cal_x);
-
         mCalorie.setText(txt_cal);
 
     }

@@ -8,6 +8,8 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -90,6 +92,23 @@ public class CatFoodListActivity extends AppCompatActivity {
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+
+        food_list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                String food_name = foods.get(position);
+                Bundle bundle = new Bundle();
+                bundle.putString("foodname",food_name);
+
+                Intent intent = new Intent(CatFoodListActivity.this,FoodDetailActivity.class);
+                intent.putExtras(bundle);
+                startActivity(intent);
+
+                Toast.makeText(CatFoodListActivity.this, food_name  , Toast.LENGTH_SHORT).show();
 
             }
         });
