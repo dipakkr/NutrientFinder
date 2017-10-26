@@ -112,7 +112,6 @@ public class DashBoardActivity extends AppCompatActivity implements View.OnClick
 //                        }
 //                    }
 //                });
-
     }
 
     @Override
@@ -132,16 +131,16 @@ public class DashBoardActivity extends AppCompatActivity implements View.OnClick
                 startActivity(new Intent(DashBoardActivity.this,FoodDieseaseActivity.class));
                 break;
 
-            case R.id.health_track :
-                startActivity(new Intent(DashBoardActivity.this,HealthTrackerActivity.class));
-                break;
-
             case R.id.suggestion_current_location :
                 startActivity(new Intent(DashBoardActivity.this,CurrentFoodSuggestion.class));
                 break;
 
-            case R.id.fab_camera :
+            case R.id.health_track :
                 startActivity(new Intent(DashBoardActivity.this,AddFoodActivity.class));
+                break;
+
+            case R.id.fab_camera :
+                startActivity(new Intent(DashBoardActivity.this,VisionActivity.class));
                 break;
         }
     }
