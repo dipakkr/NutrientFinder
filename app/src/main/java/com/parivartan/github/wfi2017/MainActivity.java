@@ -27,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
     EditText et_age;
     EditText et_email;
 
+    private int count = 0;
+
     RadioButton sex, activity;
 
     RadioGroup rg_sex;
@@ -48,15 +50,19 @@ public class MainActivity extends AppCompatActivity {
     int selectedsex;
     int selectedActivity;
 
+    SharedPreferences pref;
+
+    private int INSTRUCTION_C0DE = 1;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        pref = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
 
-        database = FirebaseDatabase.getInstance();
-        mRef = database.getReference("users");
+        mRef = FirebaseDatabase.getInstance().getReference("users");
 
         bt_next = (Button)findViewById(R.id.bt_next);
         et_name = (EditText)findViewById(R.id.et_name);

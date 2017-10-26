@@ -24,5 +24,14 @@
     //Profile_Menu
     <string name="edit">Edit</string>
 
+    <string name="choose_food">Select Food Type</string>
 
+    //Food Types
+    <string name="type_drinks">Drinks</string>
+    <string name="type_dish">Dish</string>
+    <string name="type_fruits">Fruit</string>
+    <string name="type_vegetables">Vegetables</string>
+    <string name="type_snacks">Snacks</string>
+    <string name="type_soups">Soups</string>
+    <string name="type_nonveg">Non-Veg</string>
 </resources>

@@ -34,7 +34,6 @@ public class ProfileActivity extends AppCompatActivity{
 
     private DatabaseReference mRef;
     private ValueEventListener mValueEventListener;
-    private FirebaseAuth mAuth;
 
     LinearLayout body_health;
     LinearLayout lifestyle;
@@ -69,8 +68,6 @@ public class ProfileActivity extends AppCompatActivity{
         Log.v("USERNAME IN PROFILE",fUserName);
 
         mRef = FirebaseDatabase.getInstance().getReference("users").child(fUserName);
-
-        mAuth = FirebaseAuth.getInstance();
 
         ImageView mEditButton = (ImageView)findViewById(R.id.menu_back);
         ImageView mBackButton = (ImageView)findViewById(R.id.menu_profile);
@@ -166,5 +163,6 @@ public class ProfileActivity extends AppCompatActivity{
         String txt_cal = String.valueOf(cal_x);
 
         mCalorie.setText(txt_cal);
+
     }
 }

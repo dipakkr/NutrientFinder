@@ -20,15 +20,12 @@
 
     </android.support.design.widget.AppBarLayout>
 
-
     <ListView
-
         android:layout_width="match_parent"
-        android:id="@+id/listview"
+        android:id="@+id/food_list"
         android:padding="5dp"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         android:layout_height="wrap_content">
-
     </ListView>
 
 </android.support.design.widget.CoordinatorLayout>

@@ -48,6 +48,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clickable="true"
+        android:id="@+id/fab_camera"
         android:background="?attr/selectableItemBackground"
         android:src="@drawable/ic_photo_camera_black_24dp"
         android:layout_gravity="bottom|right"

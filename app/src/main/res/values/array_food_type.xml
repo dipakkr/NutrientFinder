@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="array_food_type">
+        <item>@string/type_drinks</item>
+        <item>@string/type_dish</item>
+        <item>@string/type_fruits</item>
+        <item>@string/type_vegetables</item>
+        <item>@string/type_snacks</item>
+        <item>@string/type_soups</item>
+        <item>@string/type_nonveg</item>
+    </string-array>
+</resources>

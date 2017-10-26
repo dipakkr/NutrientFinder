@@ -5,61 +5,78 @@ package com.parivartan.github.wfi2017.model;
  */
 
 public class FoodItem {
-    public String mId;
-    public String mFoodName;
-    public String mQuantity;
-    public String mCarbs;
-    public String mProtein;
-    public String mFat;
-    public String mCalorie;
-    public String mCategoryId;
-    public String mStateId;
+    public String food_id;
+    public String food_name;
+    public int state_id;
+    public String carbohydrates;
+    public String protein;
+    public String fat;
+    public String calories;
+    public String serving;
+    public String type;
+    public String type2;
+    public String availability;
 
-    public FoodItem(String mId, String mFoodName, String mQuantity, String mCarbs, String mProtein, String mFat, String mCalorie, String mCategoryId, String mStateId) {
-        this.mId = mId;
-        this.mFoodName = mFoodName;
-        this.mQuantity = mQuantity;
-        this.mCarbs = mCarbs;
-        this.mProtein = mProtein;
-        this.mFat = mFat;
-        this.mCalorie = mCalorie;
-        this.mCategoryId = mCategoryId;
-        this.mStateId = mStateId;
+    public FoodItem(){
+
     }
 
-    public String getmId() {
-        return mId;
+    public FoodItem(String food_id, String food_name, int state_id, String carbohydrates,
+                    String protein, String fat, String calories, String serving, String type, String type2, String availability) {
+        this.food_id = food_id;
+        this.food_name = food_name;
+        this.state_id = state_id;
+        this.carbohydrates = carbohydrates;
+        this.protein = protein;
+        this.fat = fat;
+        this.calories = calories;
+        this.serving = serving;
+        this.type = type;
+        this.type2 = type2;
+        this.availability = availability;
     }
 
-    public String getmFoodName() {
-        return mFoodName;
+    public String getFood_id() {
+        return food_id;
     }
 
-    public String getmQuantity() {
-        return mQuantity;
+    public String getfood_name() {
+        return food_name;
     }
 
-    public String getmCarbs() {
-        return mCarbs;
+    public int getState_id() {
+        return state_id;
     }
 
-    public String getmProtein() {
-        return mProtein;
+    public String getCarbohydrates() {
+        return carbohydrates;
     }
 
-    public String getmFat() {
-        return mFat;
+    public String getProtein() {
+        return protein;
     }
 
-    public String getmCalorie() {
-        return mCalorie;
+    public String getFat() {
+        return fat;
     }
 
-    public String getmCategoryId() {
-        return mCategoryId;
+    public String getCalories() {
+        return calories;
     }
 
-    public String getmStateId() {
-        return mStateId;
+    public String getServing() {
+        return serving;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public String getType2() {
+        return type2;
+    }
+
+    public String getAvailability() {
+        return availability;
     }
 }
