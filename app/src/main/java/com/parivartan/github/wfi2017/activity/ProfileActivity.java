@@ -135,25 +135,27 @@ public class ProfileActivity extends AppCompatActivity{
             expr_weight = 13.75*mweight;
             expr_age = 6.75 *mAge;
             expr_height = 5*height;
-            BMR = 66 + expr_weight + expr_height - expr_age;
+            BMR = 66.5 + expr_weight + expr_height - expr_age;
 
         } else {
 
             //Calorie calculation for female
             expr_weight = 9.6 * expr_weight;
-            expr_height = 1.8 * height;
+            expr_height = 1.85 * height;
             expr_age = 4.7 * expr_age;
-            BMR = 655 + expr_height + expr_height - expr_age;
+            BMR = 55.1 + expr_height + expr_height - expr_age;
         }
 
         if (activity_id == 1){
-            calorie = BMR*1.1;
+            calorie = BMR*1.2;
         } else if (activity_id == 2){
-            calorie = BMR*1.275;
+            calorie = BMR*1.375;
         } else if (activity_id == 3){
-            calorie = BMR*1.35;
-        } else {
-            calorie = BMR*1.525;
+            calorie = BMR*1.55;
+        } else if(activity_id == 4){
+            calorie = BMR*1.725;
+        }else {
+            calorie = BMR*1.9;
         }
 
         int cal_x = (int)calorie;

@@ -20,17 +20,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.parivartan.github.wfi2017.MainActivity;
 import com.parivartan.github.wfi2017.R;
-
-import org.w3c.dom.Text;
-
-import java.io.IOException;
-import java.util.List;
-import java.util.Locale;
 
 /**
  * Created by deepak on 10/18/17.
@@ -42,6 +33,8 @@ public class DashBoardActivity extends AppCompatActivity implements View.OnClick
     TextView food_diseases;
     TextView health_tracker;
     TextView current_location;
+
+    private static final int MY_LOCATION_SERVICE = 100;
 
     SharedPreferences pref;
     private int counter = 0;
@@ -77,41 +70,8 @@ public class DashBoardActivity extends AppCompatActivity implements View.OnClick
         current_location.setOnClickListener(this);
         fab_camera.setOnClickListener(this);
 
+        //Location service calling
 
-//        if (ContextCompat.checkSelfPermission(this,
-//                Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-//
-//            if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.ACCESS_COARSE_LOCATION)) {
-//                Toast.makeText(this, "Details are here", Toast.LENGTH_SHORT).show();
-//            } else {
-//                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_COARSE_LOCATION}, MY_LOCATION_SERVICE);
-//            }
-//        }
-//
-//        fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
-//        fusedLocationProviderClient.getLastLocation()
-//                .addOnSuccessListener(this, new OnSuccessListener<Location>() {
-//                    @Override
-//                    public void onSuccess(Location location) {
-//
-//                        if (location != null) {
-//                            Geocoder gcd = new Geocoder(getApplicationContext(), Locale.getDefault());
-//
-//                            String state;
-//                            List<Address> address;
-//
-//                            try{
-//                                address = gcd.getFromLocation(location.getLatitude(),location.getLongitude(),1);
-//                                if(address.size() > 0){
-//                                    state = address.get(0).getAdminArea();
-//                                    Log.e("MY CURRENT STATE",state);
-//                                }
-//                            }catch (IOException e){
-//                                e.printStackTrace();
-//                            }
-//                        }
-//                    }
-//                });
     }
 
     @Override
@@ -150,6 +110,4 @@ public class DashBoardActivity extends AppCompatActivity implements View.OnClick
         super.onBackPressed();
         finish();
     }
-
-
 }

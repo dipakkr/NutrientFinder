@@ -14,13 +14,16 @@
 
     <string name="q6">6. Choose you activity :</string>
 
-    <string name="q6_1">Little or no exercise</string>
+    <string name="q6_1">Sedentary lifestyle</string>
 
-    <string name="q6_2">Little exercise/sports 1&#8211;3 days/week </string>
+    <string name="q6_2">Slightly active lifestyle 1&#8211;3 days/week </string>
     
-    <string name="q6_3">Moderate exercise/sports 3&#8211;5 days/week</string>
+    <string name="q6_3">Moderately active lifestyle 3&#8211;5 days/week</string>
 
-    <string name="q6_4">Hard exercise/sports 6&#8211;7 days/week</string>
+    <string name="q6_4">Active lifestyle 6&#8211;7 days/week</string>
+
+    <string name="q6_5">Very active lifestyle twice a day </string>
+
     //Profile_Menu
     <string name="edit">Edit</string>
 

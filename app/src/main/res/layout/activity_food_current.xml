@@ -53,22 +53,49 @@
         android:orientation="vertical"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:text="Suggestion Based on your current location"
-            android:textColor="#3b0101"
-            android:textSize="16sp" />
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:background="#fff7f7"
+           android:padding="10sp"
+           android:orientation="horizontal"
+           android:layout_height="wrap_content">
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:paddingTop="10dp"
+               android:textStyle="bold"
+               android:padding="5dp"
+               android:paddingBottom="10sp"
+               android:layout_height="wrap_content"
+               android:text="Current State"
+               android:textSize="15sp" />
+
+           <Spinner
+               android:layout_width="match_parent"
+               android:layout_marginStart="10sp"
+               android:layout_weight="1"
+               android:id="@+id/state_spinner"
+               style="@android:style/Widget.Spinner"
+               android:layout_gravity="center"
+               android:layout_height="40dp">
+
+           </Spinner>
+
+           <Button
+               android:layout_weight="1.5"
+               android:layout_width="match_parent"
+               android:text="Search"
+               android:id="@+id/bt_search"
+               android:layout_height="wrap_content" />
+
+       </LinearLayout>
 
         <ListView
             android:id="@+id/list_diseases"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:padding="5dp">
-
         </ListView>
 
     </LinearLayout>
-
 </android.support.design.widget.CoordinatorLayout>

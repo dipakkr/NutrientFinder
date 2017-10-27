@@ -25,7 +25,7 @@ import com.parivartan.github.wfi2017.model.FoodItem;
 import java.util.ArrayList;
 
 /**
- * Created by root on 10/21/17.
+ * Created by deepak on 10/21/17.
  */
 
 public class FoodNutrientActivity extends AppCompatActivity {

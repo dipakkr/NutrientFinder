@@ -257,6 +257,7 @@
                     <RadioGroup
                         android:layout_width="wrap_content"
                         android:id="@+id/rg_activity"
+                        android:layout_margin="5dp"
                         android:layout_height="wrap_content">
 
                         <RadioButton
@@ -283,6 +284,11 @@
                             android:id="@+id/q6_d"
                             android:text="@string/q6_4"/>
 
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/q6_e"
+                            android:text="@string/q6_5"/>
 
                     </RadioGroup>
 

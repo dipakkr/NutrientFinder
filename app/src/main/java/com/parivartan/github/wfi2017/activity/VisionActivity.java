@@ -17,7 +17,11 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -48,7 +52,7 @@ import java.util.List;
 import java.util.Locale;
 
 /**
- * Created by root on 10/26/17.
+ * Created by deepak on 10/26/17.
  */
 
 public class VisionActivity extends AppCompatActivity {
@@ -74,7 +78,9 @@ public class VisionActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        setTitle("Scan Food ");
+
+        Button fab = (Button)findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -99,6 +105,23 @@ public class VisionActivity extends AppCompatActivity {
 
         mImageDetails = (TextView) findViewById(R.id.image_details);
         mMainImage = (ImageView) findViewById(R.id.main_image);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_vision,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        if(item.getItemId() == R.id.vs_setting){
+            //TODO add code here
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 
     public void startGalleryChooser() {
@@ -292,19 +315,23 @@ public class VisionActivity extends AppCompatActivity {
         return Bitmap.createScaledBitmap(bitmap, resizedWidth, resizedHeight, false);
     }
 
+    //Applying sorting compare result from here and READ the maximum score description label
+
     private String convertResponseToString(BatchAnnotateImagesResponse response) {
-        String message = "I found these things:\n\n";
+
+        String message = "Matched Items : \n\n";
 
         List<EntityAnnotation> labels = response.getResponses().get(0).getLabelAnnotations();
+
         if (labels != null) {
             for (EntityAnnotation label : labels) {
                 message += String.format(Locale.US, "%.3f: %s", label.getScore(), label.getDescription());
+
                 message += "\n";
             }
-        } else {
+        }else {
             message += "nothing";
         }
-
         return message;
     }
 }
