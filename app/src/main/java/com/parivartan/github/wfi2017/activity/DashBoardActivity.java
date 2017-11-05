@@ -14,6 +14,7 @@ import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -35,11 +36,11 @@ public class DashBoardActivity extends AppCompatActivity implements View.OnClick
     TextView current_location;
 
     private static final int MY_LOCATION_SERVICE = 100;
-
     SharedPreferences pref;
     private int counter = 0;
-
     FloatingActionButton fab_camera;
+
+    ViewPager viewPager;
 
 
     @Override
@@ -70,7 +71,8 @@ public class DashBoardActivity extends AppCompatActivity implements View.OnClick
         current_location.setOnClickListener(this);
         fab_camera.setOnClickListener(this);
 
-        //Location service calling
+        //Viewpager
+        viewPager = (ViewPager)findViewById(R.id.viewPager);
 
     }
 
